@@ -203,5 +203,15 @@ Notes from slides:
             - Careful with atexit(): even though it is in standard,
             not all compilers implement it correctly
 
+    Which Implementation to Use?
+
+        - If you do not need lazy instantiation do not use
+        singleton at all
+            - Use a static object instead
+
+        - Meyers is simpler and less error prone, is thread-safe
+        by default in C++11
+            - Recently, is the recommended implementation
+
 
 / ------------------------------------------------ */
