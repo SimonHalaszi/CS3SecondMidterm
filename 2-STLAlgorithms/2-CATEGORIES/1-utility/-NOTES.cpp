@@ -29,21 +29,21 @@ Notes from slides:
             - Returns smaller value of the two
             - Return type is same type of x and y
             - Expects an x and y of same type, type must have operator<() overloaded
-            - No expected callback
+            - May accept binary predicate
             - in #include <algorithm>
 
         std::max(x, y)
             - Returns bigger value of the two
             - Return type is same type of x and y
             - Expects an x and y of same type, type must have operator<() overloaded
-            - No expected callback
+            - May accept binary predicate
             - in #include <algorithm>      
             
         std::minmax(x, y)
             - Returns a pair of the min and max, min is pair.first, max is pair.second
             - Return type is std::pair<xy_type, xy_type>
             - Expects an x and y of same type, type must have operator<() overloaded
-            - No expected callback
+            - May accept binary predicate
             - in #include <algorithm>     
 
         std::swap(x, y)
