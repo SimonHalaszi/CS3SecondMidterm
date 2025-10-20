@@ -1,0 +1,10 @@
+x: 25 y: 30
+std::min(x, y): 25
+std::min(x, y, [](int i, int j)-> bool { return i > j; }): 30
+std::max(x, y): 30
+std::max(x, y, std::greater<>()): 25
+std::minmax(x, y): 25 30
+std::minmax(x, y, std::greater<>()): 30 25
+x: 25 y: 30
+std::swap(x, y)
+x: 30 y: 25

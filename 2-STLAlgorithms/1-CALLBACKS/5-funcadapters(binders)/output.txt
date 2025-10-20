@@ -1,0 +1,13 @@
+void func(int i, char j) {
+    std::cout << i <<  << j << std::endl;
+}
+func(1, 'a');
+1 a
+auto bindfunc = std::bind(func, std::placeholders::_1, 'a'); bindfunc(1);
+1 a
+auto bindfunc2 = std::bind(func, 1, std::placeholders::_1); bindfunc2('a');
+1 a
+auto bindfunc3 = std::bind(func, std::placeholders::_2, std::placeholders::_1); bindfunc3('a', 1);
+1 a
+30
+30

@@ -1,0 +1,98 @@
+Modifying Algorithms
+
+transform form one
+
+d: 10 20 30 30 40 50 
+d_target: 0 0 0 0 0 0 
+std::transform(d.begin(), d.end(), d_target.begin(), [](const int& i)-> int { return i + 5; })
+*transform_form_one_itr: 0
+std::distance(d_target.begin(), transform_form_one_itr): 6
+d_target: 15 25 35 35 45 55 
+
+transform form two
+
+d: 10 20 30 30 40 50 
+d2: 10 20 30 30 40 50 
+d_target: 15 25 35 35 45 55 
+std::transform(d.begin(), d.end(), d2.begin(), d_target.begin(), [](const int& i, const int& j)-> int { return i + j; })
+*transform_form_two_itr: 0
+std::distance(d_target.begin(), transform_form_two_itr): 6
+d_target: 20 40 60 60 80 100 
+
+copy
+
+d: 10 20 30 30 40 50 
+d_target: 20 40 60 60 80 100 
+std::copy(d.begin(), d.end(), d_target.begin())
+copy_itr is at d_target.end()
+std::distance(d_target.begin(), copy_itr): 6
+d_target: 10 20 30 30 40 50 
+
+copy_if
+
+d: 10 20 30 30 40 50 
+d_target: 10 20 30 30 40 50 
+std::copy_if(d.begin(), d.end(), d_target.begin(), [](const int& i)-> bool { return i == 20; })
+*copy_if_itr: 20
+std::distance(d_target.begin(), copy_if_itr): 1
+d_target: 20 20 30 30 40 50 
+
+remove_copy
+
+d: 10 20 30 30 40 50 
+d_target: 20 20 30 30 40 50 
+std::remove_copy(d.begin(), d.end(), d_target.begin(), 20)
+*remove_copy_itr: 50
+std::distance(d_target.begin(), remove_copy_itr): 5
+d_target: 10 30 30 40 50 50 
+
+remove_copy_if
+
+d: 10 20 30 30 40 50 
+d_target: 10 30 30 40 50 50 
+std::remove_copy_if(d.begin(), d.end(), d_target.begin(), [](const int& i)-> bool { return i == 20; })
+*remove_copy_if_itr: 50
+std::distance(d_target.begin(), remove_copy_if_itr): 5
+d_target: 10 30 30 40 50 50 
+
+move
+
+d: 10 20 30 30 40 50 
+d_target: 10 30 30 40 50 50 
+std::move(d.begin(), d.end(), d_target.begin(), [](const int& i)-> bool { return i == 20; })
+move_itr is at d_target.end()
+std::distance(d_target.begin(), move_itr): 6
+d_target: 10 20 30 30 40 50 
+Did use move constructor but ints move constructor doesnt really do anything moving wise just copys
+
+Modifying Algorithms that Operate on a Single Range
+
+replace
+
+d: 10 20 30 30 40 50 
+std::replace(d.begin(), d.end(), 20, 200)
+d: 10 200 30 30 40 50 
+
+replace_if
+
+d: 10 20 30 30 40 50 
+std::replace_if(d.begin(), d.end(), [](const int& i)-> bool { return i == 20; }, 200)
+d: 10 200 30 30 40 50 
+
+reverse
+
+d: 10 20 30 30 40 50 
+std::reverse(d.begin(), d.end())
+d: 50 40 30 30 20 10 
+
+generate
+
+d: 10 20 30 30 40 50 
+std::generate(d.begin(), d.end(), []()-> int { return 250; })
+d: 250 250 250 250 250 250 
+
+generate_n
+
+d: 10 20 30 30 40 50 
+std::generate_n(d.begin(), 2, []()-> int { return 250; })
+d: 250 250 30 30 40 50 

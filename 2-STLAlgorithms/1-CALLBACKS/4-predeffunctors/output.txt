@@ -1,0 +1,36 @@
+arithmetic functors
+
+std::plus<int> adder; adder(5, 5) = 10
+5 + 5 = 10
+std::minus<int> subtractor; subtractor(5, 2) = 3
+5 - 2 = 3
+std::multiplies<int> multiplier; multiplier(5, 2) = 10
+5 * 2 = 10
+std::divides<double> divider; divider(5.1, 2.3) = 2.21739
+5.1 / 2.3 = 2.21739
+std::modulus<int> modulizer; modulizer(3, 2) = 1
+3 % 2 = 1
+
+comparison functors
+
+std::equal_to<int> equater; equater(5, 5) = 1
+5 == 5 = 1
+std::not_equal_to<int> notequater; notequater(5, 5) = 0
+5 != 5 = 0
+std::less<double> lesser; lesser(5.1, 5.1) = 0
+5.1 < 5.1 = 0
+std::greater<double> greater; greater(5.1, 5.1) = 0
+5.1 > 5.1 = 0
+std::less_equal<double> lesserequal; lesserequal(5.1, 5.1) = 1
+5.1 <= 5.1 = 1
+std::greater_equal<double> greaterequal; greaterequal(5.1, 5.1) = 1
+5.1 >= 5.1 = 1
+
+logical functors
+
+std::logical_and<bool> ander; ander(true, true) = 1
+true && true = 1
+std::logical_or<bool> orer; orer(true, true) = 1
+true || true = 1
+std::logical_not<bool> noter; noter(true) = 0
+!true = 0

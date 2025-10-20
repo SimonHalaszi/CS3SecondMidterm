@@ -1,0 +1,18 @@
+int exampleFunc(char c) {
+return static_cast<int>(c);
+}
+
+exampleFunc('a'): 97
+
+int (*funcPtr)(char);
+funcPtr = exampleFunc;
+
+funcPtr('a'): 97
+
+void (*wrongFuncPtr)(bool);
+wrongFuncPtr = exampleFunc;
+// WONT COMPILE SIGNATURES DONT MATCH
+
+wrongFuncPtr = [](bool b)->void{ std::cout << b << std::endl; };
+wrongFuncPtr(true);
+1

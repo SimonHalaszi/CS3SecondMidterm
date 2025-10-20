@@ -1,0 +1,23 @@
+find_if examples, find_if expects a unary predicate
+50
+50
+50
+0
+50
+50
+generate examples, generate expects a nullary with container return type
+40 40 40 40 40 
+30 30 30 30 30 
+20 20 20 20 20 
+10 10 10 10 10 
+for_each examples, for_each expects a unary void function
+50 40 30 20 10 
+50 40 30 20 10 
+50 40 30 20 10 
+form one accumulate doesnt expect a callback, so only one example of use
+150
+form two accumulate examples, expects a binary function with container return type 
+12000000
+12000000
+12000000
+12000000

@@ -1,0 +1,8 @@
+3 is less than 5
+true
+0 is less than 4
+1 is less than 4
+2 is less than 4
+3 is less than 4
+H e l l o 
+a b c d e 

@@ -1,0 +1,58 @@
+-- unordered_map<int, char> --
+unordmap.bucket_count(): 13
+unordmap.size(): 10
+unordmap.load_factor(): 0.769231
+load_factor() does equal size()/bucket_count()
+max_load_factor(): 1
+max_load_factor(0.7);
+unordmap.load_factor(): 0.769231
+unordmap.load_factor(): 0.37931
+unordmap.bucket(0): 0
+{0, a}
+----
+{10, k}
+{0, a}
+{1, b}
+{2, c}
+{3, d}
+{4, e}
+{5, f}
+{6, g}
+{7, h}
+{8, i}
+{9, j}
+-- unordered_multiset<int> --
+0
+0
+0
+----
+4
+4
+4
+3
+3
+3
+2
+2
+2
+1
+1
+1
+0
+0
+0
+5
+5
+5
+6
+6
+6
+7
+7
+7
+8
+8
+8
+9
+9
+9

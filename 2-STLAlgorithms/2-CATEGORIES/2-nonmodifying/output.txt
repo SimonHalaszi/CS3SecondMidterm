@@ -1,0 +1,151 @@
+Non-Modifying Search Algorithms
+
+find functions, all will get iterator to d[1] (20)
+
+d: 10 20 30 30 40 50 
+itr = std::find(d.begin(), d.end(), 20);
+*itr: 20
+itr = std::find_if(d.begin(), d.end(), [](const int& i)-> bool { return i == 20; });
+*itr: 20
+itr = std::find_if_not(d.begin(), d.end(), [](const int& i)-> bool { return i == 10; });
+*itr: 20
+
+min_element, max_element, minmax_element, functions
+
+d: 10 20 30 30 40 50 
+min_or_max_itr = std::min_element(d.begin(), d.end());
+*min_or_max_itr: 10
+min_or_max_itr = std::max_element(d.begin(), d.end());
+*min_or_max_itr: 50
+min_or_max_itr = std::minmax_element(d.begin(), d.end());
+*minmax_pair_itrs.first: 10 *minmax_pair_itrs.second: 50
+
+adjacent_find
+
+d: 10 20 30 30 40 50 
+adjacent_find_itr = std::adjacent_find(d.begin(), d.end());
+*adjacent_find_itr: 30
+++adjacent_find_itr;
+*adjacent_find_itr: 30
+
+find_first_of
+
+candidates: 0 23 43 12 30 
+d: 10 20 30 30 40 50 
+find_first_of_itr = std::find_first_of(d.begin(), d.end(), candidates.begin(), candidates.end());
+*find_first_of_itr: 30
+
+search
+
+find_me: 30 40 50 
+d: 10 20 30 30 40 50 
+search_itr = std::search(d.begin(), d.end(), find_me.begin(), find_me.end());
+*search_itr: 30
+std::distance(d.begin(), search_itr): 3
+
+search_n
+
+d: 10 20 30 30 40 50 
+search_n_itr = std::search_n(d.begin(), d.end(), 2, 30);
+*search_n_itr: 30
+std::distance(d.begin(), search_n_itr): 2
+
+binary_search
+
+d: 10 20 30 30 40 50 
+binary_search_bool = std::binary_search(d.begin(), d.end(), 20);
+binary_search_bool: 1
+
+lower_bound
+
+d: 10 20 30 30 40 50 
+lower_bound_itr = std::lower_bound(d.begin(), d.end(), 20);
+*lower_bound_itr: 20
+std::distance(d.begin(), lower_bound_itr): 1
+
+upper_bound
+
+d: 10 20 30 30 40 50 
+upper_bound_itr = std::upper_bound(d.begin(), d.end(), 20);
+*upper_bound_itr: 30
+std::distance(d.begin(), upper_bound_itr): 2
+
+equal_range
+
+d: 10 20 30 30 40 50 
+equal_range_itr = std::equal_range(d.begin(), d.end(), 30);
+*equal_range_itr.first: 30
+*equal_range_itr.second: 40
+std::distance(d.begin(), equal_range_itr.first): 2
+std::distance(d.begin(), equal_range_itr.second): 4
+
+Non-Modifying Quantifier Algorithms
+
+all_of
+
+d: 10 20 30 30 40 50 
+all_of_bool = std::all_of(d.begin(), d.end(), [](const int& i)-> bool { return i == 30; });
+all_of_bool: 0
+
+any_of
+
+d: 10 20 30 30 40 50 
+any_of_bool = std::any_of(d.begin(), d.end(), [](const int& i)-> bool { return i == 30; });
+any_of_bool: 1
+
+none_of
+
+d: 10 20 30 30 40 50 
+none_of_bool = std::none_of(d.begin(), d.end(), [](const int& i)-> bool { return i == 30; });
+none_of_bool: 0
+
+Non-Modifying Comparison Algorithms
+
+equal
+
+d: 10 20 30 30 40 50 
+equal_bool = std::equal(d.begin(), d.end(), d.begin(), d.end());
+equal_bool: 1
+
+mismatch
+
+dmismatched: 10 20 30 40 50 
+d: 10 20 30 30 40 50 
+mismatch_itrs = std::mismatch(d.begin(), d.end(), 30);
+*mismatch_itrs.first: 30
+*mismatch_itrs.second: 40
+std::distance(d.begin(), mismatch_itrs.first): 3
+std::distance(dmismatched.begin(), mismatch_itrs.second): 3
+
+lexicographical_compare
+
+dlexico: 10 20 30 20 
+d: 10 20 30 30 40 50 
+lexicographical_compare_bool = std::equal(d.begin(), d.end(), dlexico.begin(), dlexico.end());
+lexicographical_compare_bool: 0
+
+Non-Modifying Numerical Processing Algorithms 
+
+count
+
+d: 10 20 30 30 40 50 
+count_int = std::count(d.begin(), d.end(), value);
+count_int: 2
+
+count_if
+
+d: 10 20 30 30 40 50 
+count_if_int = std::count_if(d.begin(), d.end(), [](const int& i)-> bool { return i == 30; });
+count_if_int: 2
+
+accumulate form one
+
+d: 10 20 30 30 40 50 
+accumulate_form_one_int = std::accumulate(d.begin(), d.end(), 0);
+accumulate_form_one_int: 180
+
+accumulate form two
+
+d: 10 20 30 30 40 50 
+accumulate_form_two_int = std::accumulate(d.begin(), d.end(), 1, std::multiplies<>());
+accumulate_form_two_int: 360000000

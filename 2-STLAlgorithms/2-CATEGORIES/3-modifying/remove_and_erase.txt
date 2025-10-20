@@ -1,0 +1,42 @@
+Modifying: Remove (and Erase)
+
+remove
+
+d: 20 10 20 30 30 40 50 0 20 
+remove_itr = std::remove(d.begin(), d.end(), 20);
+*remove_itr: 50
+std::distance(d.begin(), remove_itr): 6
+d: 10 30 30 40 50 0 50 0 20 
+remove_itr = d.erase(remove_itr, d.end())
+remove_itr now at the end of d
+d: 10 30 30 40 50 0 
+bool all_not_twenty = std::all_of(d.begin(), d.end(), [](const int& i)-> bool { return i != 20; });
+if(all_not_twenty)
+    We got rid of all the twenties
+
+remove_if
+
+d: 20 10 20 30 30 40 50 0 20 
+remove_if_itr = std::remove(d.begin(), d.end(), [](const int& i)-> bool { return i >= 20; });
+*remove_if_itr: 20
+std::distance(d.begin(), remove_if_itr): 2
+d: 10 0 20 30 30 40 50 0 20 
+remove_if_itr = d.erase(remove_if_itr, d.end())
+remove_if_itr now at the end of d
+d: 10 0 
+bool all_less_than_twenty = std::all_of(d.begin(), d.end(), [](const int& i)-> bool { return i < 20; });
+if(all_less_than_twenty)
+    We got rid of everything greater than or equal to 20
+
+unique
+
+d: 20 10 20 30 30 40 50 0 20 
+std::sort(d.begin(), d.end());
+d: 0 10 20 20 20 30 30 40 50 
+unique_itr = unique(start_itr, end_itr);
+*unique_itr: 30
+std::distance(d.begin(), unique_itr): 6
+d: 0 10 20 30 40 50 30 40 50 
+unique_itr = d.erase(unique_itr, d.end())
+unique_itr now at the end of d
+d: 0 10 20 30 40 50 

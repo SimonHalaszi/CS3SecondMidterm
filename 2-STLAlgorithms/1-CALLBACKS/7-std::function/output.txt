@@ -1,0 +1,21 @@
+assigning to normal function
+10 
+assigning to lambda
+10 
+assigning to function pointer
+10 
+assigning to functor
+10 
+assigning to binded function
+10 
+a vector holding all sorts of callbacks, 5 different types in its entirety!
+function index: 0
+10 20 30 40 50 
+function index: 1
+10 20 30 40 50 
+function index: 2
+10 20 30 40 50 
+function index: 3
+10 20 30 40 50 
+function index: 4
+10 20 30 40 50 
