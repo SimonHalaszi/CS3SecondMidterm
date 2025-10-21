@@ -30,6 +30,8 @@ class MeyersSingleton {
             // Print for educational value
             std::cout << "First call of MeyersSingleton getInstance() happended" << std::endl;
         }
+
+        ~MeyersSingleton() {}
         
         // Payload, not static
         int i;

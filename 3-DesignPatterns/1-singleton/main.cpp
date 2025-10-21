@@ -57,5 +57,4 @@ int main() {
     std::cout << "MeyersSingleton::getInstance()->getC(): " << MeyersSingleton::getInstance()->getC() << std::endl;
     std::cout << std::endl;
     // |-------------------------------------------|
-
 }

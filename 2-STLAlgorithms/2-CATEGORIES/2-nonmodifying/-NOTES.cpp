@@ -18,6 +18,45 @@ std::algorithm_name(parameters)
         - describe arguments
     - in #include <>
 
+|-----------------------------------------------------------------------------------------|
+
+Short List:
+    Non-Modifying Search Algorithms
+        itr = std::find_if(start_itr, end_itr, unary_predicate) 
+        itr = std::find_if_not(start_itr, end_itr, unary_predicate)
+        itr = std::min_element(start_itr, end_itr)
+        itr = std::max_element(start_itr, end_itr)
+        pair<itr, itr> = std::minmax_element(start_itr, end_itr)
+        itr = std::adjacent_find(start_itr, end_itr)
+        itr = std::find_first_of(start_itr, end_itr, candidates_start_itr, candidates_end_itr)
+        itr = std::search(start_itr, end_itr, find_start_itr, find_end_itr)
+        itr = std::search_n(start_itr, end_itr, n, value)
+        itr = std::binary_search(start_itr, end_itr, value)
+        itr = std::lower_bound(start_itr, end_itr, value)
+        itr = std::upper_bound(start_itr, end_itr, value)
+        pair<itr, itr> = std::equal_range(start_itr, end_itr, value)
+        
+    Non-Modifying Quantifier Algorithms
+        bool = std::all_of(start_itr, end_itr, unary_predicate)
+        bool = std::any_of(start_itr, end_itr, unary_predicate)
+        bool = std::none_of(start_itr, end_itr, unary_predicate)
+
+    Non-Modifying Comparison Algorithms 
+        bool = std::equal(start_itr, end_itr, start_itr_two, end_itr_two)
+        pair<itr, itr> = std::mismatch(start_itr, end_itr, start_itr_two, end_itr_two)
+        bool = std::lexicographical_compare(start_itr, end_itr, start_itr_two, end_itr_two)
+
+    Non-Modifying Operational Algorithms 
+        void std::for_each(start_itr, end_itr, unary_callback)
+
+    Non-Modifying Numerical Processing Algorithms 
+        int = std::count(start_itr, end_itr, value)
+        int = std::count_if(start_itr, end_itr, unary_predicate)
+        initial_value_type = std::accumulate(start_itr, end_itr, initial_value) // form one
+        initial_value_type = std::accumulate(start_itr, end_itr, initial_value, binary_callback) // form two
+    
+|-----------------------------------------------------------------------------------------|    
+
 Notes from slides:
 
     Non-Modifying Search Algorithms 
@@ -123,7 +162,7 @@ Notes from slides:
         
     std::binary_search(start_itr, end_itr, value)
         - Uses operator< and operator==
-        - Expects sorted range of elements, returns true if an element equals value
+        - Expects sorted range of elements, returns true if any element equals the value
         - Returns boolean
         - Expect parameters
             - Two iterators forming a half open range of elements to search

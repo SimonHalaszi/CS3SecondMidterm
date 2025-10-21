@@ -105,7 +105,7 @@ Notes from slides:
             function/method should be able to manipulate
             singleton
             - Instantiation
-                - Id it does not exist, should create on
+                - If it does not exist, should create on
                 first invocation (lazy instantiation)
                 - If it does exist, should return a reference
                 or pointer to the instance
@@ -119,6 +119,7 @@ Notes from slides:
         - Two implementations approaches
             - Meyer's Singleton
             - Classic Singleton
+        - Destructors should be private
 
     Meyer's Singleton
 
@@ -129,15 +130,18 @@ Notes from slides:
 
         class Singleton {
             public:
-                static Singleton& instance() {
+                static Singleton* instance() {
                     static Singleton s;
-                    return s;
+                    return &s;
                 }
             private:
                 // copying, construction, and assignment prohibited
                 Singleton() {}
                 Singleton(const Singleton&) {}
                 Singleton& operator=(const Singleton&) {}
+
+                // private destructor
+                ~Singleton() {}
         };
 
     Classic Singleton
@@ -170,6 +174,9 @@ Notes from slides:
                 Singleton(){
                     atexit(cleanup);
                 } // constructor hidden
+
+                // private destructor
+                ~Singleton() {}
                 static Singleton* onlyInstance_;
                 static void cleanUp(); // cleanUp for atexit()
         };

@@ -34,6 +34,9 @@ Notes from slide:
                 - a local_iterator is an iterator that iterates through
                 the inside of a hash table bucket
 
+            - equal_range(key) - still exist for getting a pair of iterators
+            to the range of elements with that key
+
     - unordered set - needs <unordered_set> and using std::unordered_set
         - same interface as set and above bucket functions
 

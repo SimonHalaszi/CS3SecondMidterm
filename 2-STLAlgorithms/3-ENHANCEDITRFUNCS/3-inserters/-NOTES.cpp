@@ -16,30 +16,35 @@ Notes from slides:
         Therefore we do not need to be aware of the target range
         size to ensure safe operation.
 
+            - Attempt to assign to inserter will insert new element, hence
+            why it works so well with our already declared algorithms
+
             - In #include <iterator>
             
             - declared as such
                 std::kind_insert_iterator<container<element_type>> id;
 
-            -insert_iterator() - calls insert(position, element)
+            -insert_iterator - calls insert(iterator, element)
                                  For associative container calls hint insert, insert(iterator, element)
                 - Typical insert like insert(iterator, element) on
                 container, returns iterator to next position, and inserts
                 before iterator
-                - Inserter is initialized with container, position
-                - inserter(iterator, position) returns insert_iterator
+                - Inserter is initialized with container, itr
+                - inserter(container, itr) returns insert_iterator
                 on this position
-                - Inserter inserts before underlying position given to it
+                - Inserter inserts before underlying iterator given to it
                 - Useful for associative containers whose keys are
                 usually not modifiable on iteration
                 - insert_iterator will update is own position no need
                 for reassignment of it. Keeps itself valid
-            - back_insert_iterator() - calls push_back() on container
+            - back_insert_iterator - calls push_back() on container
                 - back_inserter(container) returns back_insert_iterator
                 for this container
-            - front_insert_iterator() - calls push_front()
+            - front_insert_iterator - calls push_front()
                 - Container must have underlying push_front so 
                 no front inserter for say vector
+                - front_inserter(container) returns front_insert_iterator
+                for this container
         - Elements are inserted sequentially, may be ineffcient
         - Increment/Decrement/Dereferncing have no effect on inserters
 

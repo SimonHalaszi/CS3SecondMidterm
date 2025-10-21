@@ -18,6 +18,18 @@ std::algorithm_name(parameters)
         - describe arguments
     - in #include <>
 
+|-----------------------------------------------------------------------------------------|
+
+Short List:
+    Sorting
+        void std::sort(start_itr, end_itr)
+        itr_in_target = std::merge(source_start_itr, source_end_itr, source2_start_itr, source2_end_itr, targert_start_itr)
+        itr = std::unique(start_itr, end_itr)
+        bool = std::binary_search(start_itr, end_itr, value)
+        void std::random_shuffle(start_itr, end_itr)
+    
+|-----------------------------------------------------------------------------------------| 
+
 Notes:
 
     Sorting

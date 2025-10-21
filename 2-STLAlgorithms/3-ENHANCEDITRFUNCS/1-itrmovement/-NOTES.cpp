@@ -21,7 +21,7 @@ Notes from slides:
 
     Poor man's iterator arithmetic
     
-    Implemented as templaces
+    Implemented as templates
         - advance(iterator, n) - move iterator n number of
         elements forward, returns void, inputted iterator will be 
         updated

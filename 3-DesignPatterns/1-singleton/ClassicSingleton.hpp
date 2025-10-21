@@ -27,6 +27,7 @@ class ClassicSingleton {
         ClassicSingleton(const ClassicSingleton&) = delete;
         ClassicSingleton& operator=(const ClassicSingleton&&) = delete;
         ClassicSingleton(const ClassicSingleton&&) = delete;
+
     private:
         // Private constructor
         ClassicSingleton() : i(0), c('0') {
@@ -37,6 +38,9 @@ class ClassicSingleton {
         
         // Static instance
         static ClassicSingleton* onlyInstance_;
+
+        // Destructor must be made private
+        ~ClassicSingleton() {}
         
         // atexit expects function signature (static void (*)())
         static void cleanUp() {

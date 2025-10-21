@@ -20,6 +20,33 @@ std::algorithm_name(parameters)
         - describe arguments
     - in #include <>
 
+|-----------------------------------------------------------------------------------------|
+
+Short List:
+    Modifying: Remove (and Erase)
+        itr = std::remove(start_itr, end_itr, element_value)
+        itr = std::remove_if(start_itr, end_itr, unary_predicate)
+        
+    Modifying Algorithms
+        itr_in_target = std::transform(source_start_itr, source_end_itr, target_start_itr, unary_callback) // form one
+        itr_in_target = std::transform(source_start_itr, source_end_itr, second_source_start_itr, target_start_itr, binary_callback) // form two
+        itr_in_target = std::copy(source_start_itr, source_end_itr, target_start_itr)
+        itr_in_target = std::copy_if(source_start_itr, source_end_itr, target_start_itr, unary_predicate)
+        itr_in_target = std::remove_copy(source_start_itr, source_end_itr, target_start_itr, source_element_value)
+        itr_in_target = std::remove_copy_if(source_start_itr, source_end_itr, target_start_itr, unary_predicate)
+        itr_in_target = std::move(source_start_itr, source_end_itr, target_start_itr)
+
+    Modifying Algorithms that Operate on a Single Range
+        void std::replace(start_itr, end_itr, value_to_replace, replace_with_value)
+        void std::replace_if(start_itr, end_itr, unary_predicate, replace_with_value)
+        void std::reverse(start_itr, end_itr)
+        itr = std::unique(start_itr, end_itr)
+        void std::generate(start_itr, end_itr, nullary_callback)
+        void std::generate_n(start_itr, n, nullary_callback)
+        
+    
+|-----------------------------------------------------------------------------------------|  
+
 Notes from slides:
 
     Modifying: Remove (and Erase)

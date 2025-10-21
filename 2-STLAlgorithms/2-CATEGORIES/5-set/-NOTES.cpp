@@ -18,6 +18,19 @@ std::algorithm_name(parameters)
         - describe arguments
     - in #include <>
 
+|-----------------------------------------------------------------------------------------|
+
+Short List:
+    Set
+        bool = std::includes(set1_start_itr, set1_end_itr, set2_start_itr, set2_end_itr)
+        itr_in_target = std::set_union(set1_start_itr, set1_end_itr, set2_start_itr, set2_end_itr, target_start_itr)
+        itr_in_target = std::set_intersection(set1_start_itr, set1_end_itr, set2_start_itr, set2_end_itr, target_start_itr)
+        itr_in_target = std::set_difference(set1_start_itr, set1_end_itr, set2_start_itr, set2_end_itr, target_start_itr)
+        itr_in_target = std::set_symmetric_difference(set1_start_itr, set1_end_itr, set2_start_itr, set2_end_itr, target_start_itr)
+    
+|-----------------------------------------------------------------------------------------|     
+
+
 Notes from slides:
 
     Set
