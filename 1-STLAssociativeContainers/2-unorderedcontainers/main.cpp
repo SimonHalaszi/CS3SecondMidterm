@@ -98,4 +98,10 @@ int main() {
     for(umsitr = unmultiset.begin(); umsitr != unmultiset.end(); ++umsitr) {
         std::cout << *umsitr << std::endl;
     }
+
+    auto range = unmultiset.equal_range(5);
+    for(auto it = range.first; it != range.second; ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
 }

@@ -23,6 +23,8 @@ Notes from slide:
             bucket count increase (1 by default)
                 - so when load_factor() reaches 1 the hash table array will
                 be expanded and rehashed
+                - max_load_factor(0.n) - sets the maximum load
+                - max_load_factor() - gets the value
             
             - bucket(key) - gets bucket index for bucket that contains
             elements with that key

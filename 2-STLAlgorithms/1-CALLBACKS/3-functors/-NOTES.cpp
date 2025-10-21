@@ -18,7 +18,7 @@ Notes from slides:
         class Functor {
             public:
                 Functor(int x = 0) : x_(x) {}
-                int operator()(int y) { return x_ + y; }
+                int operator()(int y = 0) { return x_ + y; }
             private:
                 int x_;
         };
@@ -26,6 +26,11 @@ Notes from slides:
         - then invoke like a standalone function
             Functor obj(2);
             obj(3); // returns 5
+
+        - may also call like this
+            Functor()(2); // returns 2
+            or...
+            Functor()() // returns 0
         
         - may keep state between calls
             - use this with caution for algorithms as implementations of

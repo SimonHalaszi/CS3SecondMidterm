@@ -34,7 +34,7 @@ class LesserThan {
 // Fun little functor less practical
 class Functor {
     public:
-        Functor(char c = 0) : c_(c) {}
+        Functor(char c = '0') : c_(c) {}
         // Overloaded function call operator
         char operator()() { return c_++; } 
     private:
@@ -79,4 +79,6 @@ int main() {
     // Using for_each to print the string using a lambda
     std::for_each(str.begin(), str.end(), [](char c)->void { std::cout << c << " "; });
     std::cout << std::endl;
+
+    std::cout << Functor()() << std::endl;
 }

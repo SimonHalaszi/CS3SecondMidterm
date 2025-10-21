@@ -6,3 +6,4 @@ true
 3 is less than 4
 H e l l o 
 a b c d e 
+0
