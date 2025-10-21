@@ -8,6 +8,7 @@ CATEGORIES
 
 // Key for understanding
 std::algorithm_name(parameters)
+    - Operator overloads used internally
     - Description
     - Return type
     - Expected Parameters
@@ -26,6 +27,7 @@ Notes from slides:
         - use function templates
 
         std::min(x, y)
+            - Uses operator<
             - Returns smaller value of the two
             - Return type is same type of x and y
             - Expects an x and y of same type, type must have operator<() overloaded
@@ -33,6 +35,7 @@ Notes from slides:
             - in #include <algorithm>
 
         std::max(x, y)
+            - Uses operator<
             - Returns bigger value of the two
             - Return type is same type of x and y
             - Expects an x and y of same type, type must have operator<() overloaded
@@ -40,6 +43,7 @@ Notes from slides:
             - in #include <algorithm>      
             
         std::minmax(x, y)
+            - Uses operator<
             - Returns a pair of the min and max, min is pair.first, max is pair.second
             - Return type is std::pair<xy_type, xy_type>
             - Expects an x and y of same type, type must have operator<() overloaded
@@ -47,6 +51,7 @@ Notes from slides:
             - in #include <algorithm>     
 
         std::swap(x, y)
+            - Uses operator=
             - Swaps the values inside of x and y
             - Is a void function
             - Expects an x and y of same type, type must have operator=() overloaded
