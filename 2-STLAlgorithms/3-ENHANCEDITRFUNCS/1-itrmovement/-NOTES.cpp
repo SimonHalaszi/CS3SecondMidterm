@@ -44,5 +44,7 @@ Notes from slides:
         number of elements between first_iterator and second_iterator.
         If random access, uses subtract, otherwise repeatedly calls 
         increment on first_iterator copy until it equals second_itertor.
+        Works if first_iterator is later than second_iterator just 
+        returns a negative number
 
 / ------------------------------------------------ */

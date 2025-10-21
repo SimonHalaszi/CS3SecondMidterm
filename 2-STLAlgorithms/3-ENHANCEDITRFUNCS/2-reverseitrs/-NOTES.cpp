@@ -17,7 +17,14 @@ Notes from slides:
             last element of container
             - rend() - returns iterator before the first element
             - base() - returns underlying iterator iterator plus 
-            one - useful to determine distance to beginning
+            one - gets normal iterator version of corresponding
+            reverse_iterator. If reverse_iterator is x number of spots
+            from c.rend() then the base of that reverse_iterator will
+            be x number of spots from c.begin().
+            Why? Because then base(c.rend()) will give you the normal
+            c.begin() and base(c.rbegin) will give you the normal c.end(),
+            useful for swapping between the two and maintaining concistenccy
+            in iterator usage
 
         - crbegin() and crend() also exist for const_reverse_iterator
 

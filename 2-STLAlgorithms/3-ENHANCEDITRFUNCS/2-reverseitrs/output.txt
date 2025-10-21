@@ -1,1 +1,20 @@
-// No code for this. Its just notes
+std::for_each(d.begin(), d.end(), [](const int& i)-> void { std::cout << i << ; })
+10 20 30 40 50 60 70 80 90 
+std::for_each(d.rbegin(), d.rend(), [](const int& i)-> void { std::cout << i << ; })
+90 80 70 60 50 40 30 20 10 
+r_itr = d.rbegin(); *r_itr: 90
+++r_itr; *r_itr: 80
+++r_itr; *r_itr: 70
+--r_itr; *r_itr: 80
+r_itr += 2; *r_itr: 60
+std::deque<int>::iterator itr = r_itr.base(); *itr: 70
+int distance = std::distance(d.begin(), itr); distance: 6
+distance = std::distance(d.rbegin(), r_itr); distance: 3
+distance = std::distance(r_itr, d.rend()); distance: 6
+*r_itr = 1000;
+std::for_each(d.rbegin(), d.rend(), [](const int& i)-> void { std::cout << i << ; })
+90 80 70 1000 50 40 30 20 10 
+std::deque<int>::const_reverse_iterator c_r_itr = d.crbegin(); *c_r_itr: 90
+cant do: *c_r_itr = 1000;
+std::for_each(d.rbegin(), d.rend(), [](const int& i)-> void { std::cout << i << ; })
+90 80 70 1000 50 40 30 20 10 

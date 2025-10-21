@@ -1,1 +1,12 @@
-// No code for this. Its just notes
+10 20 30 40 50 60 70 80 90 
+itr = d.begin(); *itr: 10
+std::advance(itr, 5); *itr: 60
+std::advance(itr, -2); *itr: 40
+new_itr = std::next(itr, 5); *new_itr: 90
+new_itr = std::next(itr, -2); *new_itr: 20
+std::next(itr, neg_n) == std::prev(itr, pos_n)
+new_itr = std::prev(itr, 2); *new_itr: 20
+new_itr = std::prev(itr, -5); *new_itr: 90
+std::prev(itr, neg_n) == std::next(itr, pos_n)
+distance = std::distance(itr, new_itr); 5
+distance = std::distance(itr, new_itr); -5

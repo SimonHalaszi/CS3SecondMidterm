@@ -1,1 +1,14 @@
-// No code for this. Its just notes
+std::insert_iterator<std::deque<int>> ins_itr = std::inserter(d, d.begin());
+ins_itr = 40;
+ins_itr = (ins_itr = 50);
+ins_itr = 60;
+40 50 60 
+std::back_insert_iterator<std::deque<int>> back_ins_itr = std::back_inserter(d);
+back_ins_itr = 70;
+std::back_insert_iterator<std::deque<int>> back_ins_itr = std::back_inserter(d);
+front_ins_itr = 30;
+30 40 50 60 70 
+std::deque<int>::iterator find_50 = std::lower_bound(d.begin(), d.end(), 50);
+ins_itr = std::inserter(d, find_50);
+ins_itr = 45;
+30 40 45 50 60 70 
