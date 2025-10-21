@@ -167,7 +167,9 @@ Notes from slides:
                 Singleton(const Singleton&) = delete;
                 Singleton& operator=(const Singleton&) = delete
             private:
-                Singleton(){} // constructor hidden
+                Singleton(){
+                    atexit(cleanup);
+                } // constructor hidden
                 static Singleton* onlyInstance_;
                 static void cleanUp(); // cleanUp for atexit()
         };

@@ -1,1 +1,19 @@
-// No code for this. Its just notes
+First call of ClassicSingleton getInstance() happended
+First call of MeyersSingleton getInstance() happended
+
+ClassicSingleton Payload Accessing
+ClassicSingleton::getInstance()->getI(): 0
+ClassicSingleton::getInstance()->getC(): 0
+ClassicSingleton::getInstance()->setI(2)
+ClassicSingleton::getInstance()->setC('b')
+ClassicSingleton::getInstance()->getI(): 2
+ClassicSingleton::getInstance()->getC(): b
+
+MeyersSingleton Payload Accessing
+MeyersSingleton::getInstance()->getI(): 0
+MeyersSingleton::getInstance()->getC(): 0
+MeyersSingleton::getInstance()->setI(1)
+MeyersSingleton::getInstance()->setC('a')
+MeyersSingleton::getInstance()->getI(): 2
+MeyersSingleton::getInstance()->getC(): b
+
