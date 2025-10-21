@@ -15,7 +15,7 @@ Notes from slides:
             - normal functions
             - function pointers
             - lambdas
-            - functors (user defined and user predefined)
+            - functors (user-defined and predefined)
             - binded functions
         
         - std::function is a construct that can point to
