@@ -9,7 +9,9 @@ class Shape {
         Shape() : Shape(1, 1, 'w') {}   // Constructor delegation to Shape(int)
         Shape(int height, int width, char color) : height_(height), width_(width), color_(color) {}
 
-        int getSize() const { return height_; } // Concrete method
+        int getHeight() const { return height_; } // Concrete method
+        int getWidth() const { return width_; } // Concrete method
+        int getColor() const { return color_; } // Concrete method
         
         // Providing a definition to a non final virtual method makes it a hook
         virtual void sayName() const { std::cout << "Shape"; } // Virtual function
@@ -45,7 +47,7 @@ class Rectangle : public Shape {
         // Square can use same logic so this is final
         void draw() const override final {           
             for(int i = 0; i < height_; ++i) {
-                for(int i = 0; i < width_; ++i) {
+                for(int j = 0; j < width_; ++i) {
                     std::cout << color_ << "  ";
                 }
                 std::cout << std::endl;
