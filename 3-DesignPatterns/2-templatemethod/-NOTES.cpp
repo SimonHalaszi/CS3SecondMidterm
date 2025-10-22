@@ -157,12 +157,11 @@ Notes from Slides:
         template method - Conrete method of base class that uses primitive operations
         (in effect, concrete implmentations) to accomplish a certain task.
 
-            - Motivation: To have a universal method in a base class for interacting
-            with derived classes that will all have similar functionality and use
-            cases but differ in semantics. An algorithm that can operate on all
-            derived cases in the same way producing different, but, expectedly similar
-            results. Polymorphism as base class can operate using template method on
-            all the derived classes.
+            - Motivation: To have a universal functionality via a concrete method in the base
+            class that uses abstract methods to provide similar but overriden behavior
+            when using base classes via polymorphism.
+
+            EX: Is the getProduct method of an abstract factory
 
         is a behavioral pattern - deals with class behavior
         
