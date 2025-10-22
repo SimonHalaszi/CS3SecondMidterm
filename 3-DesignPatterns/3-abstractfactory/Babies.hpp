@@ -51,6 +51,17 @@ class BabyFactory {
         BabyFactory(std::string location, int babyCount) 
         : location_(location), babyCount_(babyCount) {}
 
+        virtual BabyFactory* getFactory() = 0; // in UML diagram. Only really useful if factories are singletons
+        /*
+            Useful for if factories were singleton, then you could do
+            ConcreteFactory::getFactory()->makeProduct() would get and use
+            the same factory instance everytime for object creation. Currently
+            we do not use singletons so this function is quite redundant. Since
+            instances are currently made on demand or accessed through some container
+            holding them. Meaning we already have direct access to the instance through
+            a BabyFactory* anyway.
+        */
+
         Baby* getBaby();    // a template method
         int getBabyCount() const { return babyCount_; }
         std::string getLocation() const { return location_; }
@@ -76,6 +87,8 @@ class BoyFactory : public BabyFactory {
         BoyFactory(std::string location, int babyCount) 
         : BabyFactory(location, babyCount) {}
 
+        BabyFactory* getFactory() override { return this; }
+
         ~BoyFactory() override {}
     protected:
         Baby* makeBaby() override final; // concrete factory method
@@ -91,6 +104,8 @@ class GirlFactory : public BabyFactory {
     public:
         GirlFactory(std::string location, int babyCount) 
         : BabyFactory(location, babyCount) {}
+
+        BabyFactory* getFactory() override { return this; }
 
         ~GirlFactory() override {}
     protected:

@@ -25,8 +25,8 @@ int main() {
     mothers.push_back(new GirlFactory("Cleveland", 0));
 
     for(int i = 0; i < 5; ++i) {
-        BabyFactory* getAFactory = mothers[rand() % mothers.size()];
-        const Baby* newBaby = getAFactory->getBaby();
+        BabyFactory* factory = mothers[rand() % mothers.size()];
+        const Baby* newBaby = factory->getBaby();
         
         std::cout << "----------------------------------------------" << std::endl;
         std::cout << "Baby info:" << std::endl;
@@ -35,8 +35,8 @@ int main() {
         std::cout << "name: " << newBaby->getName() << std::endl;
         std::cout << std::endl;
 
-        std::cout << "From: " << getAFactory->getLocation() << std::endl;
-        std::cout << "Which has made " << getAFactory->getBabyCount() << " amount of babies." << std::endl;
+        std::cout << "From: " << factory->getLocation() << std::endl;
+        std::cout << "Which has made " << factory->getBabyCount() << " amount of babies." << std::endl;
         std::cout << "----------------------------------------------" << std::endl;
         std::cout << std::endl; 
 
