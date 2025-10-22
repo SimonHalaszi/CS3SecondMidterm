@@ -1,0 +1,105 @@
+#ifndef BABIES_HPP_
+#define BABIES_HPP_
+
+#include <string>
+#include <cstdlib>
+#include <deque>
+
+// abstract product
+class Baby {
+    public:
+        int getBday() const { return bday_; }
+        char getGender() const { return gender_; }
+        std::string getName() const { return name_; }
+    protected:
+        int bday_;
+        char gender_;
+        std::string name_;
+};
+
+// boy concrete product
+class Boy : public Baby {
+    public:
+        Boy();
+};
+
+// boy constructor
+Boy::Boy() {
+    bday_ = rand() % 365 + 1;
+    gender_ = 'm';
+    static std::deque<std::string> names = {"Simon", "Chuck", "Wesley", "Preston", "Jacob"};
+    name_ = names[rand() % names.size()];
+}
+
+// girl concrete product
+class Girl : public Baby {
+    public:
+        Girl();
+};
+
+// girl constructor
+Girl::Girl() {
+    bday_ = rand() % 365 + 1;
+    gender_ = 'f';
+    static std::deque<std::string> names = {"Simone", "Chelsea", "Willow", "Paige", "Jill"};
+    name_ = names[rand() % names.size()];
+}
+
+// abstract factory
+class BabyFactory {
+    public:
+        BabyFactory(std::string location, int babyCount) 
+        : location_(location), babyCount_(babyCount) {}
+
+        Baby* getBaby();    // a template method
+        int getBabyCount() const { return babyCount_; }
+        std::string getLocation() const { return location_; }
+
+        virtual ~BabyFactory() {}
+
+    protected:
+        virtual Baby* makeBaby() = 0; // abstract factory method
+
+    private:
+        std::string location_;
+        int babyCount_;
+};
+
+Baby* BabyFactory::getBaby() {
+    ++babyCount_;
+    return makeBaby();
+}
+
+// boy concrete factory
+class BoyFactory : public BabyFactory {
+    public:
+        BoyFactory(std::string location, int babyCount) 
+        : BabyFactory(location, babyCount) {}
+
+        ~BoyFactory() override {}
+    protected:
+        Baby* makeBaby() override final; // concrete factory method
+};
+
+// concrete factory method
+Baby* BoyFactory::makeBaby() {
+    return new Boy();
+}
+
+// girl concrete factory
+class GirlFactory : public BabyFactory {
+    public:
+        GirlFactory(std::string location, int babyCount) 
+        : BabyFactory(location, babyCount) {}
+
+        ~GirlFactory() override {}
+    protected:
+        Baby* makeBaby() override final; // concrete factory method
+};
+
+// concrete factory method
+Baby* GirlFactory::makeBaby() {
+    return new Girl();
+}
+
+#endif

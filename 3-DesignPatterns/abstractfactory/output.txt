@@ -1,0 +1,50 @@
+----------------------------------------------
+Baby info:
+bday: 217
+gender: f
+name: Willow
+
+From: Cleveland
+Which has made 1 amount of babies.
+----------------------------------------------
+
+----------------------------------------------
+Baby info:
+bday: 214
+gender: f
+name: Simone
+
+From: Cleveland
+Which has made 2 amount of babies.
+----------------------------------------------
+
+----------------------------------------------
+Baby info:
+bday: 278
+gender: m
+name: Jacob
+
+From: Columbus
+Which has made 1 amount of babies.
+----------------------------------------------
+
+----------------------------------------------
+Baby info:
+bday: 218
+gender: f
+name: Willow
+
+From: Cleveland
+Which has made 3 amount of babies.
+----------------------------------------------
+
+----------------------------------------------
+Baby info:
+bday: 330
+gender: m
+name: Preston
+
+From: Columbus
+Which has made 2 amount of babies.
+----------------------------------------------
+

@@ -1,1 +1,70 @@
-// No code for this. Its just notes
+Rectangle
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  o  
+300
+
+Square
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  
+400
+
+Square
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+e  e  e  e  e  e  e  e  e  e  
+100
+
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  
+400
