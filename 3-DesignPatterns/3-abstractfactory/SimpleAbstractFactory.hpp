@@ -24,7 +24,7 @@ class ConcreteProduct : public AbstractProduct {
 
 // Constructor for product
 ConcreteProduct::ConcreteProduct(int val) {
-    attribute_ = val;
+    attribute_ = val * 2;
 }
 
 // Abstract factory
