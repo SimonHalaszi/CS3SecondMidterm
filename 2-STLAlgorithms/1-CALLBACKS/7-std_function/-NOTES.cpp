@@ -27,5 +27,8 @@ Notes from slides:
 
         - EX:
             std::function<return_type(parameters)> function_obj_name;
+        
+        - Polymorphic construct for callbacks. Always manipulation
+        and use of any type of callback as a universal typing.
 
 / ------------------------------------------------ */

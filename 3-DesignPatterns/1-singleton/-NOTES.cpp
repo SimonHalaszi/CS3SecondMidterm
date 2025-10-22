@@ -45,6 +45,8 @@ Notes from slides:
                 parameters
                 - Returns zero if successful, nonzero otherwise
                 - Expects a void nullary callback
+                - Expections a function with program lifespan, global
+                or static
             - EX:
                 atexit(cleanup);
                 void cleanup() { delete somePointer; }
@@ -196,7 +198,7 @@ Notes from slides:
 
         - Why can't we just use static member functions/variables?
             - Its a possibility; however, if object is seldom used
-            or is large its better to use dynamic allocation
+            or is large its better to use dynamic allocation. 
         - Why care about destroying singleton? There does not seem to
         be a memory leak?
             - No there does not: since with singleton there is not

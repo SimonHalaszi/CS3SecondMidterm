@@ -18,7 +18,7 @@ Notes from slide:
         - function name is a function poiinter
 
         - declare
-            return_type (*funcptr_name)(paremeters);
+            return_type (*funcptr_name)(parameters);
         
         - intialize and reassign
             funcptr_name = otherfunc_name; // Must have same signature
@@ -28,7 +28,7 @@ Notes from slide:
 
 Side notes:
 
-    Think like how an C-style arrays identifier is actually a pointer
+    Think like how a C-style arrays identifier is actually a pointer
     to the start of that array. So yes we interact with C-style arrays
     with the identifier but its actually a pointer. Same deal with functions
     and we can use pointers to interface with functions.

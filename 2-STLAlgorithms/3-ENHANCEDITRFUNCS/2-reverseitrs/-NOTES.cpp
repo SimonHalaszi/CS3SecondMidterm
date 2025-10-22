@@ -18,7 +18,7 @@ Notes from slides:
             normal itr = end() - 1
             - rend() - returns iterator before the first element
             normal itr = begin() - 1
-            - base() - returns underlying iterator iterator plus 
+            - base() - returns underlying iterator plus 
             one - gets normal iterator version of corresponding
             reverse_iterator. If reverse_iterator is x number of spots
             from c.rend() then the base of that reverse_iterator will

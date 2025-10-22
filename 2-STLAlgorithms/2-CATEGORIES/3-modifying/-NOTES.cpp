@@ -51,7 +51,7 @@ Notes from slides:
 
     Modifying: Remove (and Erase)
 
-    'Remove' in the context of this algorithms means to shift all wanted
+    'Remove' in the context of these algorithms means to shift all wanted
     data to the front of the container and to overwrite the unwanted values
     with present data. This leaves the back of the container with undefined
     values.
@@ -97,6 +97,7 @@ Notes from slides:
     - Do not erase elements from containers (do not know if whole or full range)
         - Instead move wanted elements forward
         - Return iterator past last wanted element
+        - Aka return iterator to first unwanted element
 
     - remove-erase-idiom - Get the returned iterator and then use the containers
     erase() function to eliminate removed elements

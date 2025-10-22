@@ -22,7 +22,7 @@ Notes from Slides:
         abstract functions are overriden by concrete implementations
             - clients may not be concerned with implementations
             - various concrete objects may be assembled into a single container
-            and operated uniformly
+            and operated uniformly (polymorphism)
                 - virtual function would provide customized functionality per
                 object
 

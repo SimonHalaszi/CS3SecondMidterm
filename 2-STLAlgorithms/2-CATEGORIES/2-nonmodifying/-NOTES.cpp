@@ -31,7 +31,7 @@ Short List:
         itr = std::find_first_of(start_itr, end_itr, candidates_start_itr, candidates_end_itr)
         itr = std::search(start_itr, end_itr, find_start_itr, find_end_itr)
         itr = std::search_n(start_itr, end_itr, n, value)
-        itr = std::binary_search(start_itr, end_itr, value)
+        bool = std::binary_search(start_itr, end_itr, value)
         itr = std::lower_bound(start_itr, end_itr, value)
         itr = std::upper_bound(start_itr, end_itr, value)
         pair<itr, itr> = std::equal_range(start_itr, end_itr, value)

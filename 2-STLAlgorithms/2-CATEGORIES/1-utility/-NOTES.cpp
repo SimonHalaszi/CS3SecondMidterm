@@ -21,9 +21,9 @@ std::algorithm_name(parameters)
 
 Short List:
     Utility Algorithms
-        itr = std::min(x, y)
-        itr = std::max(x, y)
-        pair<itr, itr> = std::minmax(x, y)
+        xy_type = std::min(x, y)
+        xy_type = std::max(x, y)
+        pair<xy_type, xy_type> = std::minmax(x, y)
         void std::swap(x, y)
     
 |-----------------------------------------------------------------------------------------| 

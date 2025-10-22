@@ -1,9 +1,9 @@
 /*
 Short List:
     Utility Algorithms
-        itr = std::min(x, y)
-        itr = std::max(x, y)
-        pair<itr, itr> = std::minmax(x, y)
+        xy_type = std::min(x, y)
+        xy_type = std::max(x, y)
+        pair<xy_type, xy_type> = std::minmax(x, y)
         void std::swap(x, y)
 
     Non-Modifying Search Algorithms
@@ -16,7 +16,7 @@ Short List:
         itr = std::find_first_of(start_itr, end_itr, candidates_start_itr, candidates_end_itr)
         itr = std::search(start_itr, end_itr, find_start_itr, find_end_itr)
         itr = std::search_n(start_itr, end_itr, n, value)
-        itr = std::binary_search(start_itr, end_itr, value)
+        bool = std::binary_search(start_itr, end_itr, value)
         itr = std::lower_bound(start_itr, end_itr, value)
         itr = std::upper_bound(start_itr, end_itr, value)
         pair<itr, itr> = std::equal_range(start_itr, end_itr, value)

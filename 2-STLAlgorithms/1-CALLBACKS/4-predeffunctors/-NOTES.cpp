@@ -18,13 +18,13 @@ Notes from slides:
         - in std namespace (need to be imported or scope resolved)
         
         - have to be instantiated with type
-            - plus<int> myPlus; myPlus<3, 4>; // 7
+            - plus<int> myPlus; myPlus(3, 4); // 7
         
         - may be used in algorithms as callbacks
             - int sum = accumulate(v.begin(), v.end(), 0, plus<int>());
         
         - regular operators cannot be used as callbacks, functors
-        are adapters that wrap around regaul arithmetic operators
+        are adapters that wrap around regular arithmetic operators
         
         - transparent functors (C++14): angle brackets are empty,
         type is deduced - this variant is preffered
@@ -42,7 +42,9 @@ Notes from slides:
                 - this can be changed, although you will have to specify container
                 
                 - EX:
-                    priority_queue<string, vector<string>, greater<>> rpq;
+                    priority_queue<string>, vector<string>, greater<>> rpq;
+                    // dont need to make instance of greater because this isnt
+                    // an using it, just declaring that type as being used.
         
         - logical functors: 
             - logical_and, logical_or, logical_not

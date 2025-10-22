@@ -28,7 +28,7 @@ Notes from slide:
             - [&] any external variable is implicitly captured by reference.
             
             - [=] any external variable is implicitly captured by value
-                - obviously can be a very expensive bad thing to do.
+                - obviously can be very wasteful.
             
             -variables are captured at the time of lambda definition. (not invocation)
         
@@ -46,7 +46,7 @@ Notes from slide:
 
         - can be pointed to by function pointers.
 
-        - can call lambda in plan using more parenthesis
+        - can call lambda in place using more parenthesis
             [capture_block](parameters)->return_type { body; }(arguments);
 
 / ------------------------------------------------ */

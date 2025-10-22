@@ -107,7 +107,7 @@ Notes from Slides:
         implementation of virtual function
             - Pure virtual function - virtual function, prototype followed by = 0
             - To be implemented in future derived class
-            - Must be public
+            - Must be public / protected
         
         Concrete operation (method/function) - function whose implementation is
         provided
@@ -145,23 +145,23 @@ Notes from Slides:
 
     Template Method Pattern
 
-        Specify an abstract class that outlines expect functionality
+        Specify an abstract class that outlines expected functionality
         of all derivees
 
         Primitive operations - functions to be implemented (overriden) in
-        concrete classes. A pure virtual function.
+        concrete classes. A pure virtual function (abstract function)
 
-        hook operations - *may* be overridden by concrete classes, provide
+        Hook operations - *may* be overridden by concrete classes, provide
         default behavior. A virtual function that isnt pure.
 
-        template method - function of base class that uses primitive operations
+        template method - Conrete method of base class that uses primitive operations
         (in effect, concrete implmentations) to accomplish a certain task.
 
             - Motivation: To have a universal method in a base class for interacting
             with derived classes that will all have similar functionality and use
             cases but differ in semantics. An algorithm that can operate on all
             derived cases in the same way producing different, but, expectedly similar
-            results. Polymorphism as base class can operator using template method on
+            results. Polymorphism as base class can operate using template method on
             all the derived classes.
 
         is a behavioral pattern - deals with class behavior

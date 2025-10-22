@@ -51,7 +51,7 @@ Notes from slides:
 
         -EX:
             std::vector<int> v = {10, 20, 30, 40, 50};
-            // will get itr to element that is equal to 30
+            // will get itr to element that has value 30
             std::vector<int>::iterator itr = std::find_if(v.begin(), v.end(), std::bind(std::greater<>(), std::placeholders::_1, 20));
 
 / ------------------------------------------------ */
