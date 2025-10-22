@@ -60,6 +60,10 @@ class BabyFactory {
             instances are currently made on demand or accessed through some container
             holding them. Meaning we already have direct access to the instance through
             a BabyFactory* anyway.
+
+            If singleton was enforced cant have this as virtual function, primitive or hook. Since static
+            function cant be virtual / overriden. Concrete classes would have to implement it themselves
+            without directions to do so from base class. So be careful.
         */
 
         Baby* getBaby();    // a template method
@@ -87,6 +91,7 @@ class BoyFactory : public BabyFactory {
         BoyFactory(std::string location, int babyCount) 
         : BabyFactory(location, babyCount) {}
 
+        // If implementing singleton could not be virtual function and would handle lazy instatiation
         BabyFactory* getFactory() override { return this; }
 
         ~BoyFactory() override {}
@@ -105,6 +110,7 @@ class GirlFactory : public BabyFactory {
         GirlFactory(std::string location, int babyCount) 
         : BabyFactory(location, babyCount) {}
 
+        // If implementing singleton could not be virtual function and would handle lazy instatiation
         BabyFactory* getFactory() override { return this; }
 
         ~GirlFactory() override {}
