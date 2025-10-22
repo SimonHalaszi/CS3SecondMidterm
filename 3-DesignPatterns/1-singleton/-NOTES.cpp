@@ -101,6 +101,15 @@ Notes from slides:
 
     Singleton Design Pattern
 
+        3 core ideas of singleton
+            1.) Lazy Instantiation (Of a single instance, handles own creation)
+            2.) Program-wide access
+            3.) Must handle own destruction
+
+        In essence, Singleton handles its own program-wide lifecycle for
+        a single instance of itself, while providing means of access to the
+        instance.
+        
         - Ensures that there is a single instance of a class
         in a given program
             - Must have global access: more than a single
