@@ -171,6 +171,7 @@ Notes from slides:
 
         class Singleton{
             public:
+                // Static function for accessing static pointer member
                 static Singleton* instance() {
                     if(onlyInstance_ == nullptr) {
                         onlyInstance_ = new Singleton;
@@ -182,25 +183,31 @@ Notes from slides:
                 Singleton(const Singleton&) = delete;
                 Singleton& operator=(const Singleton&) = delete
             private:
-                Singleton(){
-                    atexit(cleanup);
-                } // constructor hidden
+                // private constructor
+                Singleton();
 
                 // private destructor
                 ~Singleton() {}
+
+                // Private static Singleton* to hold dynamically allocated instance
                 static Singleton* onlyInstance_;
+
+                // Static void function to be registered in atexit
                 static void cleanUp(); // cleanUp for atexit()
         };
 
+        // cleanUp definition
         void Singleton::cleanUp() {
             delete onlyInstance;
             onlyInstance = nullptr;
         }
 
+        // Constructor will intiate payload and register cleanUp in atexit
         Singleton::Singleton() {
             atexit(cleanUp);
         }
 
+        // Static variable must be intiated outside of class
         Singleton* Singleton::onlyInstance_ = nullptr;
 
     Why Classic Singleton is the Way It Is
