@@ -68,7 +68,7 @@ class ConcreteFactorySingleton : public AbstractFactory {
         ConcreteFactorySingleton(const ConcreteFactorySingleton&&) = delete;
         ConcreteFactorySingleton& operator=(const ConcreteFactorySingleton&&) = delete;          
     protected:
-        // Override of primitive method makeProduct() from base class 
+        // Override of abstract factory method makeProduct() from base class 
         // concrete factory method
         AbstractProduct* makeProduct() override {
             return new ConcreteProduct();
