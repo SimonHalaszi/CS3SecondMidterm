@@ -10,14 +10,14 @@ Notes from slide:
 
     - an array of buckets of elements
     
-    - hash function translates (hashes) key to bucket index
+    - hash function translates/hashes key to a bucket index
     
     - collision - hashing different keys to same bucket
         - usually resolved through pointer to linked list of elements
     
     - implements amortized O(1) element lookup/insertion/deletion
         - Insertion amortized because hash array needs rehashed sometimes when 
-        array needs to expand
+        number of buckets needs to be increased
         
         - Lookup amortized to O(1) because in case of collision we must
         do O(N) search through potential linked list of elements in

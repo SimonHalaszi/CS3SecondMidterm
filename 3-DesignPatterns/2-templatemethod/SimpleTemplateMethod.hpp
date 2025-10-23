@@ -41,6 +41,10 @@ class ConcreteClass : public AbstractBase {
         ConcreteClass() : ConcreteClass(1) {} // Constructor delegation
         ConcreteClass(int val) : aVar2_(new int[val]) {}
 
+        // Overridden destructor that manages dynamically variables specific to ConcreteClass
+        ~ConcreteClass() override { delete [] aVar2_; }
+
+    protected:
         // Override abstract methods for per ConcreteClass functionality
         void AbstractMethod1() override {
             // something
@@ -51,9 +55,6 @@ class ConcreteClass : public AbstractBase {
         void AbstractMethod3() override {
             // something
         }
-
-        // Overridden destructor that manages dynamically variables specific to ConcreteClass
-        ~ConcreteClass() override { delete [] aVar2_; }
     
     private:
         // Members

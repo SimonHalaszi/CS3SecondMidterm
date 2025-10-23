@@ -19,6 +19,13 @@ Notes from slide:
 
         - declare
             return_type (*funcptr_name)(parameters);
+
+            - paratheses around funcptr_name because star operator
+            has lower precedence than function call operator (). Same
+            reason arrow operator exist for short hand of (*ptr).func()
+
+            - Also so funcptr_name doesnt get interpretted as a function
+            that returns a pointer but as a function pointer
         
         - intialize and reassign
             funcptr_name = otherfunc_name; // Must have same signature

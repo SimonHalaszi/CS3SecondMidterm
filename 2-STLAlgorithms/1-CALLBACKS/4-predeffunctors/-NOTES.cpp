@@ -38,7 +38,7 @@ Notes from slides:
         - comparison functors:
             - equal_to, not_equal_to, less, greater, less_equal, greater_equal
                 - less is used as default comparison in priority_queue container
-                adapter
+                adapter. And in most algorithms that compare things.
                 
                 - this can be changed, although you will have to specify container
                 

@@ -113,7 +113,7 @@ Notes from Slides:
         provided, can be virtual but doesnt have to be.
 
         abstract class - class that has at least one abstract function
-            - Instance of this class wont exist only pointers and references
+            - Instance of this class cant exist only pointers and references
             to derived classes
         
         concrete class - has no abstract functions
@@ -128,7 +128,7 @@ Notes from Slides:
         and derived destructor may not be executed leaking memory
 
         default base abstract class destructor idiom
-            virtual ~Figure() {}
+            virtual ~Figure() { body... }
 
     Constructor Delegation
 

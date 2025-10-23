@@ -124,6 +124,9 @@ Notes from slides:
 
         - WARNING: Source range must be as long or less long than latter supplied ranges
 
+        - Can do form of remove-erase idiom on these algorithms
+            target.erase(std::some_algo(source_start_itr, source_end_itr, target_start_itr), target.end());
+
     // Form one
     std::transform(source_start_itr, source_end_itr, target_start_itr, unary_callback)
         - Uses operator= where target_element = source_element

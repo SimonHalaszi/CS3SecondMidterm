@@ -47,7 +47,7 @@ Notes from slides:
                 parameters
                 - Returns zero if successful, nonzero otherwise
                 - Expects a void nullary callback
-                - Expections a function with program lifespan, global
+                - Expects a function with program lifespan, global
                 or static
             - EX:
                 atexit(cleanup);

@@ -52,7 +52,7 @@ Notes from me:
 
     Algorithms we study where inserters are very useful
 
-    Elements created during these algrothims will be inserted at insert iterator (inserter)
+    Elements assigned to target during these algrothims will be inserted at insert iterator (inserter)
 
     All return the same type of inserter that was given in
         - Call with insert_iterator will return insert_iterator that will insert past last element inserted

@@ -32,7 +32,7 @@ Notes from Slides:
             - important when control over object creation is necessary: e.g.
             instead of just creating an object, factory may dynamically allocate
             it from an object pool, do complex configurations.
-            - contains methods for object creation
+            - contains factory methods for object creation
 
         factory method (design pattern) - implements the actual object creation
             - usually returns a pointer to created object
@@ -76,16 +76,16 @@ Notes from Slides:
 
 In my own words:
 
-    The abstract factory defines an interface for creating an abstract product.
-    The abstract product class defines a list of attributes all the concrete products
-    will share. The derived concrete products implement a constructor that initializes
-    the values of these attributes. The abstract factory defines a abstract factory
-    method that returns a pointer of the type of the abstract product class. The derived 
-    concrete factories, for which there is one for each derived concrete product. Will
-    provide a concrete factory method. Which involves dynamically allocating the 
-    respective concrete product and returning it through the abstract product pointer.
-    This abstract factory method is called in a template method inside of the abstract
-    factory which calls the abstract factory method and returns the value. This interface
+    The 'abstract factory' defines an interface for creating an 'abstract product'.
+    The 'abstract product' class defines a list of attributes all the 'concrete products'
+    will share and implement. The derived 'concrete products' implement a constructor that initializes
+    the values of these attributes. The 'abstract factory' defines a 'abstract factory
+    method' that returns a pointer of the type of the 'abstract product' class and handles its creation. The derived 
+    'concrete factories', for which there is one for each derived 'concrete product'. Will
+    provide a 'concrete factory method'. Which involves dynamically allocating the 
+    respective 'concrete product' and returning it through the 'abstract product' pointer.
+    This 'abstract factory method' is called in a 'template method' inside of the 'abstract
+    factory' which calls the 'abstract factory method' and returns the value. This interface
     allows for seemless creation of many types of objects through one pointer. Thats
     polymorphism.
 
