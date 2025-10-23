@@ -30,6 +30,8 @@ Notes from slides:
                 static int currentNumber_; // Declaration
         };
 
+        int Student::currentNumber_ = 10;
+
         - Static methods may access only static member variables
         - Static methods are invoked with scope resolution:
             Student::getCurrent();
@@ -57,11 +59,12 @@ Notes from slides:
             - To ensure a single instance
             - To prevent wasting of resources (when copying)
         - How? - Make copy constructor and overloaded assignment
-        non-public (private or protected) or deleted
+        non-public (private or protected) or delete
             - If non-public can still be invoked by other member
             functions
             - Effect: compile-time error on attempt to use outside
-            of member functions
+            of member functions, or attempt to use at all in case of
+            delete
         - EX:
 
         class Student {
@@ -134,14 +137,14 @@ Notes from slides:
 
     Meyer's Singleton
 
-        - instance() may return a reference or a pointer
+        - getInstance() may return a reference or a pointer
         - Lazy instantiation acheived through local static variable
         that is allocated at first invocation
         - Automatically deallocated with all global variables
 
         class Singleton {
             public:
-                static Singleton* instance() {
+                static Singleton* getInstance() {
                     static Singleton s;
                     return &s;
                 }
@@ -157,14 +160,14 @@ Notes from slides:
 
     Classic Singleton
 
-        - Private static attribute pointer - points to dynamically
+        - Private static pointer to Singleton instance - points to dynamically
         allocated instance
             - if zero/null_ptr unallocated
-        - instance() static method returns pointer to instance, lazy
+        - getInstance() static method returns pointer to instance, lazy
         instantiation allocate when first accessed
             - Object accessed through instance()
                 - EX:
-                Singleton::instance()->public_method();
+                Singleton::getInstance()->public_method();
         - Prohibit creation and copying - all constructors and
         assignment are private or deleted (C++11)
         - To ensure proper destruction - use atexit()
@@ -172,7 +175,7 @@ Notes from slides:
         class Singleton{
             public:
                 // Static function for accessing static pointer member
-                static Singleton* instance() {
+                static Singleton* getInstance() {
                     if(onlyInstance_ == nullptr) {
                         onlyInstance_ = new Singleton;
                     }

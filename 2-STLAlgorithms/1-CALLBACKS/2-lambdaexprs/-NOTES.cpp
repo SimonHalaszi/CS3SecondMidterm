@@ -16,7 +16,7 @@ Notes from slide:
         - defined in C++11
         
         - syntax:
-            [capture_block](parameters)->return_type { body; };
+            [capture_block](parameters)-> return_type { body; };
     
         - capture - passing discipline and (optionally) name of variables
         taken form outside of scope (called context) of the lambda expressions
@@ -35,13 +35,13 @@ Notes from slide:
         - if return_type is omitted and there is a single return statement in body,
         compiler will deduce return_type on basis of the return statement.
 
-        - if no parameters, parenthese are optional.
+        - if no parameters, parentheses are optional.
 
         - so lambda may look like this
             []{ return 1; };            // Many omissions of the syntax but valid
             []()->int { return 1; };    // Same thing equally as valid
 
-        - can be used as parameters for other functions, have to conform to signature.
+        - can be used as parameters for other functions, have to conform to expected signature.
             - say STL algorithms ;)
 
         - can be pointed to by function pointers.

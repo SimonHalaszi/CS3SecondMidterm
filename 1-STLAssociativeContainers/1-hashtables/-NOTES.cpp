@@ -16,10 +16,10 @@ Notes from slide:
         - usually resolved through pointer to linked list of elements
     
     - implements amortized O(1) element lookup/insertion/deletion
-        - amortized because hash array needs rehashed sometimes when 
+        - Insertion amortized because hash array needs rehashed sometimes when 
         array needs to expand
         
-        - also amortized to O(1) because in case of collision we must
+        - Lookup amortized to O(1) because in case of collision we must
         do O(N) search through potential linked list of elements in
         bucket
 

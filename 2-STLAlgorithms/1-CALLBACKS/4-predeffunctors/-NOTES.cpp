@@ -24,7 +24,7 @@ Notes from slides:
             - int sum = accumulate(v.begin(), v.end(), 0, plus<int>());
         
         - regular operators cannot be used as callbacks, functors
-        are adapters that wrap around regular arithmetic operators
+        are adapters that wrap around regular operators
         
         - transparent functors (C++14): angle brackets are empty,
         type is deduced - this variant is preffered
@@ -33,6 +33,7 @@ Notes from slides:
 
         - arithmetic functors:
             - plus, minus, multiplies, divides, modulus
+            - all binary
         
         - comparison functors:
             - equal_to, not_equal_to, less, greater, less_equal, greater_equal
@@ -42,9 +43,9 @@ Notes from slides:
                 - this can be changed, although you will have to specify container
                 
                 - EX:
-                    priority_queue<string>, vector<string>, greater<>> rpq;
+                    priority_queue<string, vector<string>, greater<>> rpq;
                     // dont need to make instance of greater because this isnt
-                    // an using it, just declaring that type as being used.
+                    // expecting one, just declaring that type as being used.
         
         - logical functors: 
             - logical_and, logical_or, logical_not

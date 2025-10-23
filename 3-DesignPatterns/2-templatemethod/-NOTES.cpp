@@ -52,9 +52,9 @@ Notes from Slides:
         of derived class?
             - For example shapes need drawn regardless of what type of shape
         
-        Can be done through pointers to objects
-            Figure *fig1 = new Square(3);
-            Figure *fig2 = new Triangle(4);;
+        Can be done through pointers to objects, through polymorphism
+            Figure* fig1 = new Square(3);
+            Figure* fig2 = new Triangle(4);;
             fig1->draw();
             fig2->draw();
 
@@ -110,7 +110,7 @@ Notes from Slides:
             - Must be public / protected
         
         Concrete operation (method/function) - function whose implementation is
-        provided
+        provided, can be virtual but doesnt have to be.
 
         abstract class - class that has at least one abstract function
             - Instance of this class wont exist only pointers and references
@@ -124,7 +124,7 @@ Notes from Slides:
 
         Destructors are executed in reverse order of constructors (derived first)
 
-        Always declare destructors as virtual or destructors are abound at compile-time
+        Always declare destructors as virtual or destructors are bound at compile-time
         and derived destructor may not be executed leaking memory
 
         default base abstract class destructor idiom
@@ -152,7 +152,7 @@ Notes from Slides:
         concrete classes. A pure virtual function (abstract function)
 
         Hook operations - *may* be overridden by concrete classes, provide
-        default behavior. A virtual function that isnt pure.
+        default behavior. A virtual function that isnt pure. A virtual concrete method.
 
         template method - Conrete method of base class that uses primitive operations
         (in effect, concrete implmentations) to accomplish a certain task.

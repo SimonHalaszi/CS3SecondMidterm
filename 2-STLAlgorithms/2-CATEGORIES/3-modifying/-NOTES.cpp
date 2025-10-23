@@ -26,6 +26,7 @@ Short List:
     Modifying: Remove (and Erase)
         itr = std::remove(start_itr, end_itr, element_value)
         itr = std::remove_if(start_itr, end_itr, unary_predicate)
+        itr = std::unique(start_itr, end_itr)
         
     Modifying Algorithms
         itr_in_target = std::transform(source_start_itr, source_end_itr, target_start_itr, unary_callback) // form one
@@ -40,7 +41,6 @@ Short List:
         void std::replace(start_itr, end_itr, value_to_replace, replace_with_value)
         void std::replace_if(start_itr, end_itr, unary_predicate, replace_with_value)
         void std::reverse(start_itr, end_itr)
-        itr = std::unique(start_itr, end_itr)
         void std::generate(start_itr, end_itr, nullary_callback)
         void std::generate_n(start_itr, n, nullary_callback)
         
@@ -117,8 +117,8 @@ Notes from slides:
     Modifying Algorithms
 
     - Usually operate on two ranges
-        - source range
-        - destination (target) range
+        - half open source range
+        - destination (target) range (denotated with one start iterator)
 
         - Ranges may be unrelated, overlapping or the same
 

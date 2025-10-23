@@ -103,21 +103,21 @@ class ConcreteFactoryNotS : public AbstractFactory {
 
 With singleton, interface as such:
 
-    ConcreteFactorySingleton::getFactory()->getProduct();
+    AbstractProduct* = ConcreteFactorySingleton::getFactory()->getProduct();
 
 Non singleton interface with polymorphism as so:
 
     AbstractFactory* factory = new ConcreteFactoryNotS();
-    factory->getProduct();
+    AbstractProduct* = factory->getProduct();
     delete factory; 
 
     Or more intuitively doing:
 
     ConcreteFactoryNotS() factory;
-    factory.getProduct();
+    AbstractProduct* = factory.getProduct();
 
 Use singleton if you want all ConcreteFactory to have
-the same internal information, and dont want to polymorphism
+the same internal information, and dont want to use polymorphism
 or to manually create factories. Use non singleton otherwise,
 say you need two ConcreteFactories with different internal
 information.

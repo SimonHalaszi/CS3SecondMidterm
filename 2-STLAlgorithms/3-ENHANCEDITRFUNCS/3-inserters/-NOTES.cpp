@@ -16,7 +16,7 @@ Notes from slides:
         Therefore we do not need to be aware of the target range
         size to ensure safe operation.
 
-            - Attempt to assign to inserter will insert new element, hence
+            - Attempt to dereference and assign to inserter will insert new element, hence
             why it works so well with our already declared algorithms
 
             - In #include <iterator>

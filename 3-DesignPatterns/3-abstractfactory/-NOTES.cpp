@@ -16,7 +16,7 @@ Notes from Slides:
             to be implemented and used by the pattern
             
             - concrete class - provides implementation for the abstract
-            functions, does not have any virtual (abstract) methods
+            functions, does not have any abstract methods
         
         Abstract class pointers may point to concrete objects and the
         abstract functions are overriden by concrete implementations
@@ -61,7 +61,7 @@ Notes from Slides:
             - concrete factory, product, method - implementations of respective
             interfaces
         
-        benefit of abstract factory patten - client may not need to know
+        benefit of abstract factory pattern - client may not need to know
         (concrete) implementations to operate objects
 
         abstract factory is creational pattern

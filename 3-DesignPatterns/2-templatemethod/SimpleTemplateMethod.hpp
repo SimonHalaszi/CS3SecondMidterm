@@ -10,7 +10,7 @@ class AbstractBase {
 
         // The template method, a concrete function that calls abstract methods
         void TemplateMethod() { // Body uses abstract methods
-            // Specifics of algorithm template method does not relevant to this example, this is just random code
+            // Specifics of algorithm template method is not relevant to this example, this is just random code
             if(aVar1_[0] < 1) {
                 AbstractMethod1();
                 AbstractMethod2();

@@ -29,6 +29,7 @@ Notes from slides:
             std::function<return_type(parameters)> function_obj_name;
         
         - Polymorphic construct for callbacks. Always manipulation
-        and use of any type of callback as a universal typing.
+        and use of any type of callback as a universal typing. Does
+        this through type erasure.
 
 / ------------------------------------------------ */

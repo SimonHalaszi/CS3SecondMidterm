@@ -34,6 +34,8 @@ Notes from slides:
         - auto is useful as type of newFunction, otherwise it can be
         complicated to understand what function pointer you need
 
+        - behavior of oldFunction not changed
+
         - EX:
             // binds second parameter to value of str
             auto f1 = std::bind(myFunc, std::placeholders::_1, str);
