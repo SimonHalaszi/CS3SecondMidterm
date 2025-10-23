@@ -24,7 +24,7 @@ class ConcreteProduct : public AbstractProduct {
 
 // Constructor for product
 ConcreteProduct::ConcreteProduct(int val) {
-    attribute_ = val;
+    attribute_ = val * 2;
 }
 
 // Abstract factory
@@ -75,7 +75,7 @@ class ConcreteFactorySingleton : public AbstractFactory {
         }
       
     private:
-        // Private constructors, single should manage own lifecycle
+        // Private constructors, singleton should manage own lifecycle
         ConcreteFactorySingleton() : ConcreteFactorySingleton('a', 0) {}
         ConcreteFactorySingleton(char c, int i) : AbstractFactory(c, i) {}
 
